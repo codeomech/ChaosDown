@@ -1,0 +1,102 @@
+.content {
+    flex: 1 1 auto;
+}
+
+.example-card {
+    width: 320px;
+    height: 450px;
+    margin-bottom: 8px;
+    border-radius: 25px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(1px);
+    background: rgb(218, 225, 226);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.ng-card {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+.desc p {
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+a {
+    color: white;
+    background: rgb(91, 95, 95);
+    border-radius: 25px;
+}
+
+.blog-title {
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+.txt {
+    color: white;
+    background: rgb(79, 120, 107);
+    border-radius: 25px;
+    margin: 20px;
+
+}
+
+.txt:hover {
+    color: green;
+    background: #fff;
+}
+
+.blog-title {
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+.mt-3 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.m1 {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search{
+    margin-top: 30px;
+    background: rgb(225, 245, 248);
+    width: 250px;
+    margin-left: 140px;
+    border-radius: 25px;
+    height: 40px;
+}
+@media only screen and (max-width: 420px) {
+    .content {
+        margin-left: -40px;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+    .search {
+        margin-left: 15px;
+    }
+
+}

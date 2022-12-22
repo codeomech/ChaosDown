@@ -1,0 +1,85 @@
+.contact-form {
+    position: absolute;
+    margin-top: 100px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 520px;
+    padding: 80px 40px;
+    border-radius: 35px;
+    background: rgb(194, 202, 203);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /* background: linear-gradient(90deg, rgb(217, 235, 228), rgb(187, 248, 229)); */
+    
+}
+
+.contact-form [type=submit] {
+        height: 40px;
+        width: 250px;
+        position: absolute;
+        color: #fff;
+        font-size: 15px;
+        background: rgb(79, 120, 107);
+        cursor: pointer;
+        border-radius: 25px;
+        margin-left: 33px;
+        border: none;
+        outline: none;
+        margin-top: -5%;
+
+}
+
+.form-group input[type=password],
+.form-group input[type=text] {
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: black;
+    font-size: 16px;
+}
+
+.form-group input {
+    width: 100%;
+    margin-bottom: 15px;
+    display:inline-block;
+}
+
+.form-group label {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: black;
+}
+h1 {
+    margin-top: 0px;
+    padding: 0 0 20px;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.footer {
+    position: absolute;
+    margin-top: 1000px;
+    width: 100%;
+}
+
+.password-input {
+    position: relative;
+}
+
+.eye {
+    position: relative;
+    right: -290px;
+    transform: translateY(-200%);
+    cursor: pointer;
+}
+p{
+
+    margin-top: 50px;
+    margin-bottom: 20px;
+}

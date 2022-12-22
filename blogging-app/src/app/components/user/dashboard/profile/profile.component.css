@@ -1,0 +1,119 @@
+.profile-image {
+    max-width: 20%;
+    max-height: 20%;
+    border: 2px solid #ff4081;
+    border-radius: 50%;
+}
+
+
+.m1 {
+    margin-top: 500px;
+}
+
+
+mat-card{
+    position: relative;
+    margin-top: 300px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 90%;
+    padding: 80px 40px;
+    border-radius: 35px;
+    background: rgb(194, 202, 203);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10p
+
+}
+.contact-form input {
+    width: 50%;
+    height: 40px;
+    margin-bottom: 15px;
+    /* display: inline-block; */
+    margin-left: 25%;
+    border-radius: 8px;
+}
+
+.contact-form label {
+    margin: 0;
+    padding: 0;
+    margin-left: 25%;
+    margin-bottom: 10px;
+    font-size: 100%;
+    color: black;
+    margin-bottom: 0px;
+}
+mat-card h1{
+    text-align: center;
+    font-size: 35px;
+}
+.contact-form [type=submit] {
+    align-items: center;
+    height: 8%;
+    width: 35%;
+    position: absolute;
+    color: #fff;
+    font-size: 15px;
+    background: rgb(79, 120, 107);
+    cursor: pointer;
+    border-radius: 25px;
+    margin-left: 25%;
+    border: none;
+    outline: none;
+    margin-top: 0%;
+
+}
+.eye {
+    position: relative;
+    right: 30px;
+    transform: translateY(10%);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.m1{
+    margin-top: 200px;
+}
+@media screen and (max-width: 420px) {
+    .contact-form [type=submit] {
+        align-items: center;
+        height: 40px;
+        width: 100px;
+        margin-left: 30px;
+    
+        }
+    .contact-form input {
+    width: 90%;
+    height: 25px;
+    margin-bottom: 15px;
+    /* display: inline-block; */
+    margin-left: 15%;
+}
+
+.contact-form label {
+    margin-left: 15%;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 85%;
+    color: black;
+    margin-bottom: 0px;
+}
+
+mat-card h1 {
+    text-align: center;
+    font-size: 100%;
+}
+mat-card h2 {
+    text-align: center;
+    font-size: 90%;
+}
+    
+.eye{
+    font-size: 20px;
+    position: relative;
+    right: -130px;
+    transform: translateY(-220%);
+    cursor: pointer;
+    font-size: 15px;
+}
+}

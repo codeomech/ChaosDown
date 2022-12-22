@@ -1,0 +1,16 @@
+<app-header></app-header>
+<div class="container contact-form">
+    <h1>Contact Us</h1>
+    <form (ngSubmit)="formSubmit()">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message"></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+
+    
+<div class="m1"></div>
+    <app-footer></app-footer>

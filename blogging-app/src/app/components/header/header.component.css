@@ -1,0 +1,45 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+a {
+    color: #fff;
+    border-radius: 25px;
+    /* background: rgb(155, 95, 95); */
+    margin-left: 20px;
+}
+
+.logo {
+    font-size: 35px;
+    font-family: 'Paytone One';
+    color: black
+}
+
+.header-bg {
+    background: linear-gradient(90deg, rgb(4, 4, 4), rgb(129, 150, 143));
+    background-size: cover;
+
+}
+
+.logo {
+    width: 180px;
+}
+.logo:hover{
+    cursor: pointer;
+}
+.logout:hover {
+    background: red;
+}
+
+.btn:hover {
+    color: #fff;
+    background:green;
+}
+
+.txt{
+    color: white;
+}
+.txt:hover{
+    color: green;
+    background: #fff;
+}

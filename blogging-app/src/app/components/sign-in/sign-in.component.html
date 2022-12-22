@@ -1,0 +1,36 @@
+<div>
+<app-header></app-header>
+<div class="container contact-form">
+    <form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+      <h1 class="h3 mb-3 font-weight-normal">Please Sign in</h1>
+      <div class="form-group">
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input [class.is-invalid]= "username?.invalid && loginForm.get('username')?.touched" type="text" id="inputUsername" type="text" id="inputUsername" [formControlName]="'username'" class="form-control" placeholder="Username" required="" autofocus="">
+        <div *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+          <small *ngIf= "username.errors?.['required']" class="text-danger">Username is required</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword" class="sr-only">Password
+        </label>
+        <input type="password" id="inputPassword" [formControlName]="'password'" class="form-control password-input" placeholder="Password" [type]= "hide ? 'password':'text' " >
+        <span class="material-icons eye" matSuffix (click)="hide = !hide">
+          {{hide ? 'visibility_off': 'visibility'}}
+        </span>
+
+      </div>
+      <button [disabled]= "loginForm.invalid" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+    <div>
+      <p>Don't have an account?</p>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" routerLink="/sign-up">Sign Up</button>
+    </div>
+    <div>
+      <p>Forgot Password?</p>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" routerLink="/forgot-password">Reset Password</button>
+    </div>
+  </div>
+  </div>
+
+
+  <app-footer class="footer"></app-footer>

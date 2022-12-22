@@ -1,0 +1,13 @@
+
+<mat-toolbar class="header-bg">
+    <img routerLink="/landing-page" src="assets/images/logo.png" class="logo" alt="">
+    <div class="spacer"></div>
+    <!-- <a class="btn" style="font-family: 'Lucida Console';" mat-button routerLink="/sign-in" *ngIf="!isLoggedIn()" routerLinkActive="active">Sign in</a>
+    <a class="btn" style="font-family: 'Lucida Console';" mat-button routerLink="/sign-up" *ngIf="!isLoggedIn()" routerLinkActive="active">Sign up</a> -->
+    <a class="user txt" mat-button routerLink="/profile" routerLinkActive="active" >
+        <mat-icon>account_circle</mat-icon> Hello, {{username |slice:0:10}}
+    </a>
+    <a class="logout" style="font-family: 'Lucida Console';" mat-button routerLink="/sign-up" *ngIf="isLoggedIn()" (click)="logout()">Logout</a>
+</mat-toolbar>
+
+

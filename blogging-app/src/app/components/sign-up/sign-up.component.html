@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="container justify-content-center contact-form">
+  <form class="form-signin" [formGroup]= "registerForm" (ngSubmit)="onSubmit()">
+      <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
+
+      <div class="form-group">
+        <label for="inputUsername" class="sr-only">Username</label>
+        <input [class.is-invalid]= "username?.invalid && registerForm.get('username')?.touched" type="text" id="inputUsername" [formControlName]="'username'" class="form-control" placeholder="Username"  autofocus="">
+        <div *ngIf= "registerForm.get('username')?.invalid && registerForm.get('username')?.touched">
+          <small *ngIf= "username.errors?.['required']" class="text-danger">Username is required</small>
+          <small *ngIf= "registerForm.get('username').errors?.['minlength']" class="text-danger">Username must be at least 4
+            character</small>
+      </div>
+
+
+      <div class="form-group">
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input [class.is-invalid]= "email?.invalid && registerForm.get('email')?.touched" type="email" id="inputEmail" [formControlName]="'email'"class="form-control" placeholder="Email" autofocus="">
+        <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+          <small *ngIf="email.errors?.['required']" class="text-danger">Email is required</small>
+          <small class="text-danger" *ngIf="registerForm.get('email').errors?.['pattern']">
+            Email is invalid
+          </small>
+        </div>
+         
+      </div>
+
+
+      <div class="form-group">
+        <label for="inputPassword" class="sr-only">Password</label>
+        
+        <input type="password" id="inputPassword" [formControlName]="'password'" class="form-control password-input" placeholder="Password" [type]= "hide ? 'password':'text' ">
+        <span class="material-icons eye" matSuffix (click)="hide = !hide">
+          {{hide ? 'visibility_off': 'visibility'}}
+        </span>
+        
+      </div>
+
+      <div class="form-group">
+        <label for="inputConfirmPassword" class="sr-only">Confirm Password</label>
+        <input [class.is-invalid]= "registerForm.errors?.['misMatch']" formControlName="confirmPassword" type="password" id="inputConfirmPassword" [formControlName]="'confirmPassword'" class="form-control confirm-password" placeholder="Confirm Password" >
+        <small class="text-danger" *ngIf= "registerForm.errors?.['misMatch']">Password does not match</small>
+      </div>
+      <button [disabled]= "registerForm.invalid" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+      </div>
+  </form>
+  <div>
+    <p>have an account?</p>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" routerLink="/sign-in">Sign In</button>
+  </div>
+</div>
+
+
+  <app-footer class="footer"></app-footer>
+
+

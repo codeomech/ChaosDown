@@ -1,0 +1,97 @@
+.add-post-content{
+    padding-top: 20px;
+  }
+  label{
+    font-size: 15px;
+    margin-bottom: 2px;
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  
+  .post-content, .post-title{
+    color: royalblue;
+  }
+
+  h3{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+    .form-group [type=submit] {
+      height: 40px;
+      width: 250px;
+      position: relative;
+      color: black;
+      font-size: 15px;
+      background: linear-gradient(90deg, rgb(142, 180, 164), rgb(72, 171, 139));
+      cursor: pointer;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      margin-top: 3%;
+    }
+    button{
+      margin-bottom: 100px;
+    }
+
+    .m1{
+      margin-top: 150px;
+    }
+
+.txt{
+  color: white;
+  background:rgb(79, 120, 107);
+  border-radius: 25px;
+
+}
+
+.txt:hover {
+  color: green;
+  background: #fff;
+}
+
+.dropzone {
+  margin-top: 10px;
+  height: 100px;
+  min-width: 100px;
+  display: table;
+  background-color: whitesmoke;
+  width: 300px;
+  border: dashed 1px #aaa;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.text-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.centered {
+  text-align: center;
+}
+
+.browse-button {
+  color: rgb(26, 85, 212);
+  cursor: pointer;
+}
+.m2{
+  margin-top: 0px;
+}
+label{
+  font-size: 20px;
+}
+
+.btn-remove-image{
+   position:absolute;
+   cursor: pointer;
+   top: 40px;
+   right:20px;
+   background-color: red;
+   color: white;
+   border-radius: 50%;
+   width: 20px;
+   height: auto;
+   text-align: center;
+
+}

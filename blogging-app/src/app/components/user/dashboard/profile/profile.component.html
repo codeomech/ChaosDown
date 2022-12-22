@@ -1,0 +1,51 @@
+<div>
+        <app-header></app-header>
+        <div class="container">
+                <mat-card>
+                        <h1>Profile Details</h1>
+                        <mat-card-content>
+                                <div class="bootstrap-wrapper">
+                                        <!-- <div class="container"> -->
+                                        <div class="container text-center">
+                                                <img src="https://t4.ftcdn.net/jpg/03/46/93/61/360_F_346936114_RaxE6OQogebgAWTalE1myseY1Hbb5qPM.jpg"
+                                                        alt="" class="profile-image" />
+
+                                                <h2 class="mt20">{{username}} </h2>
+                                        </div>
+
+
+                                        <div class="container contact-form">
+                                                <form class="contact-form">
+                                                        <!-- <label for="currentPassword">Current Password:</label><br> -->
+                                                        <input type="password" id="currentPassword"
+                                                                [(ngModel)]="currentPassword" name="currentPassword"
+                                                                placeholder="Current Password"
+                                                                [type]="hide ? 'password':'text' ">
+                                                        <span class="material-icons eye" matSuffix
+                                                                (click)="hide = !hide">
+                                                                {{hide ? 'visibility_off': 'visibility'}}
+                                                        </span>
+                                                        <br>
+                                                        <!-- <label for="newPassword">New Password:</label><br> -->
+                                                        <input type="password" id="newPassword"
+                                                                [(ngModel)]="newPassword" name="newPassword"
+                                                                placeholder="New Password"
+                                                                [type]="nhide ? 'password':'text' ">
+                                                        <span class="material-icons eye" matSuffix
+                                                                (click)="nhide = !nhide">
+                                                                {{nhide ? 'visibility_off': 'visibility'}}
+                                                        </span>
+                                                        <br><br>
+                                                        <button type="submit" (click)="changePassword()">Update
+                                                                Password</button>
+                                                </form>
+                                        </div>
+                                </div>
+                        </mat-card-content>
+
+                </mat-card>
+        </div>
+        <div class="m1"></div>
+        <app-footer></app-footer>
+
+</div>

@@ -1,0 +1,29 @@
+<div class="hero">
+    <video class="back-video" autoplay muted loop id="myVideo">
+        <source src="assets/images/video1.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <nav>
+        <img routerLink="/landing-page" src="assets/images/logo.png" class="logo" alt="">
+        <ul>
+            <li><a *ngIf="!isLoggedIn()" routerLink="/sign-up">SIGN UP</a></li>
+            <li><a *ngIf="!isLoggedIn()" routerLink="/sign-in">SIGN IN</a></li>
+
+            <li><a routerLink="/about-us">ABOUT US</a></li>
+            <li><a routerLink="/contact-us">CONTACT US</a></li>
+            <li><a *ngIf="isLoggedIn()" routerLink="/dashboard">DASHBOARD</a></li>
+            <li><a class="logout" mat-button *ngIf="isLoggedIn()" (click)="logout()">LOGOUT</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="container">
+            <h1>CHAOSDOWN</h1>
+
+        </div>
+        
+        <a mat-button routerLink="/post-list">Start reading</a>
+        <a mat-button routerLink="/dashboard/post-blog">Start Writing</a>
+    </div>
+</div>
+

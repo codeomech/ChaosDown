@@ -1,0 +1,51 @@
+
+<div class="add-post-content">
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  <div class="container">
+    <div>
+      <h3>Create New Post</h3>
+    </div>
+    <hr>
+    <form [formGroup]="addPostForm" (ngSubmit)="addPost()">
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" [formControlName]="'title'" class="form-control" placeholder="Title">
+      </div>
+      <label>Image</label>
+      <div class="dropzone" appDrag (files)="fileDropped($event)">
+        <div class="text-wrapper">
+          <div class="centered">
+            Drag and drop
+            <a (click)="selectFile.click()" class="browse-button">Browse</a>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <input type="file" style="display: none;" multiple value="select" #selectFile (change)="onFileSelected($event)">
+      </div>
+      <div class="mt-1">
+        <div class="row">
+          <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile *ngFor="let file of postPayload.postImages; let i =index; ">
+              <div class="m2" style="position:relative">
+                <span class="btn-remove-image" (click)="removeImages(i)">X</span>
+                <img [src]="file.url" width="400px" height="300px">
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Body</label>
+        <editor [formControlName]="'body'" [init]="{plugins: 'link'}"></editor>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Post</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  
+  

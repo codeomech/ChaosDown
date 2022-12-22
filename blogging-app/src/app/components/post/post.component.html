@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div *ngIf="isLoggedIn()">
+  <a class="txt" mat-button routerLink="/dashboard">
+    <mat-icon>dashboard</mat-icon>Dashboard
+
+  </a>
+</div>
+<div class="content" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-8">
+          <h1 class="blog-title">{{post.title}}</h1>
+          <div class="ImageBanner">
+            <div class="mt-3">
+              <img [src]="post?.postImages[0]?.url" height="300px" width="100%">
+            </div>
+          </div>
+          <span>
+                    <p >by <span class="author">{{post.username}}</span></p>
+                </span>
+          <hr>
+          <p [innerHTML]="post.content"></p>
+          <hr>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  <share-buttons class="share fb"
+  [include]="[
+  'facebook',
+  ]" [show]="1"> </share-buttons>
+  <share-buttons class="share twtr" [include]="[
+    'twitter',
+    ]" [show]="1"> </share-buttons>
+    <share-buttons class="share whtsp" [include]="[
+      'whatsapp',
+      ]" [show]="1"> </share-buttons>
+        <share-buttons class="share copy" [include]="[
+          'copy'
+          ]" [show]="1"> </share-buttons>
+
+  <div class="m1"></div>
+    <app-footer></app-footer>
+
+  
+  
+
+  
+

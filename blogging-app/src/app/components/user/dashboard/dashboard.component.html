@@ -1,0 +1,49 @@
+<div *ngIf="isLoggedIn()">
+    <app-header></app-header>
+<mat-sidenav-container>
+    <mat-sidenav class="sidenav" #sidenav opened="true" mode="side">
+        <mat-nav-list>
+            <div class="container">
+                <a class="txt" mat-list-item routerLink="/landing-page">
+                    <mat-icon>home</mat-icon> Home
+                </a>
+                <!-- <a class="txt" mat-list-item routerLink="/dashboard/profile" routerLinkActive="active">
+                    <mat-icon>lock</mat-icon>My Profile
+                </a> -->
+                <a class="txt" mat-list-item routerLink="/dashboard/my-post" routerLinkActive="active">
+                    <mat-icon>view_list</mat-icon>My Post</a>
+                <a class="txt"  mat-list-item routerLink="/dashboard/post-blog" routerLinkActive="active">
+                    <mat-icon>library_add</mat-icon>Write Article
+                </a>
+                <a class="txt" mat-list-item routerLink="/post-list">
+                    <mat-icon>view_module</mat-icon>View Blog</a>
+
+                    <a class="txt" mat-list-item routerLink="/profile">
+                        <mat-icon> vpn_key</mat-icon>Change Password</a>
+                <!-- <a class="logout" mat-list-item (click) = "logout()"><mat-icon>logout</mat-icon>Logout</a> -->
+                <a class="txt" mat-list-item routerLink="/contact-us" >
+                    <mat-icon> contact_phone</mat-icon>Contact Us</a>
+                
+
+            </div>
+            
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        
+            <button *ngIf="isLoggedIn()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+                (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+        <div class="container">
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
+</div>
+
+<app-footer style="margin-top: 10px;"></app-footer>

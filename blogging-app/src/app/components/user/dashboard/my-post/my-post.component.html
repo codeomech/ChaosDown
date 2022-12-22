@@ -1,0 +1,27 @@
+<div class="container">
+    <table  class="table table-striped">
+        <thead>
+            <tr>
+                <th>Post id</th>
+                <th>Title</th>
+                <th class="m-action">Actions</th>
+            </tr>
+        </thead>
+        <tbody >
+            <ng-container *ngFor="let post of postDetail; let i = index">
+                <!-- <div class="ifbaba"> -->
+                <!-- <a mat-button *ngIf="username != post.username && i < 1" routerLink="/dashboard/post-blog">Start Writing</a>  -->
+            <!-- </div> -->
+            <tr *ngIf="username==post.username">
+                    <td>{{post.id}}</td>
+                    <td>{{post.title}}</td>
+                    <!-- <td >{{post?.username}}</td> -->
+                    <td>
+                        <a class="details" mat-button href="/post/{{post.id}}">Details</a>
+                        <a class="delete" mat-button (click)="deletePost(post.id)">Delete</a>
+                    </td>
+            </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

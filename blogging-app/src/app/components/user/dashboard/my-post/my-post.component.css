@@ -1,0 +1,22 @@
+.details {
+    background: rgb(79, 120, 107);
+    border-radius: 25px;
+    color: white;
+}
+.details:hover{
+    background: #fff;
+    color: green;
+}
+
+.delete {
+    color: white;
+    background: rgb(79, 120, 107);
+    margin-left: 2px;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+.delete:hover{
+    background: rgb(179, 27, 27);
+}
+
