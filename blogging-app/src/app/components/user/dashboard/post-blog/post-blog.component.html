@@ -30,7 +30,7 @@
             <mat-grid-tile *ngFor="let file of postPayload.postImages; let i =index; ">
               <div class="m2" style="position:relative">
                 <span class="btn-remove-image" (click)="removeImages(i)">X</span>
-                <img [src]="file.url" width="400px" height="300px">
+                <img class="imagebhai" [src]="file.url" >
               </div>
             </mat-grid-tile>
           </mat-grid-list>

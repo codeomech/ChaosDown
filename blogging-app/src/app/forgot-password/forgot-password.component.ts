@@ -23,10 +23,9 @@ export class ForgotPasswordComponent implements OnInit {
 forgotPasswordForm: FormGroup;
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router :Router) {
     this.forgotPasswordForm = this.formBuilder.group({
-      username: ['', [Validators.required, Validators.minLength(4)]],
       email: ['',[Validators.required]],
-      password: [''],
-      confirmPassword: ['']
+      password: ['',[Validators.required]],
+      confirmPassword: ['',[Validators.required]]
     },{validator: PasswordValidator});
   }
 

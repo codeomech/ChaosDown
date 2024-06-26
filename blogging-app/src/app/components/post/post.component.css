@@ -3,6 +3,7 @@ h1{
 }
 p{
     color: black;
+    font-size: 15px;
 }
 .m1 {
     min-height: 50vh;
@@ -12,10 +13,11 @@ p{
 }
 
 .blog-title{
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     margin-top: 20px;
+    text-align: justify;
 }
 .author{
     color: blue;
