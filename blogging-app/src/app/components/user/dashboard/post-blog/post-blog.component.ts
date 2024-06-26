@@ -42,9 +42,14 @@ export class PostBlogComponent implements OnInit {
   ngOnInit(): void {}
 
   addPost() {
-    this.postPayload.content = this.addPostForm.get('body').value;
-    this.postPayload.title = this.addPostForm.get('title').value;
-
+    const bodyControl = this.addPostForm.get('body');
+    const titleControl = this.addPostForm.get('title');
+    if (bodyControl) {
+      this.postPayload.content = bodyControl.value;
+    }
+    if (titleControl) {
+      this.postPayload.content = titleControl.value;
+    }
     const PostFormData = this.prepareFormData(this.postPayload);
 
     this.addPostService.addPost(PostFormData).subscribe(
