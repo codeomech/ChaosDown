@@ -1,22 +1,31 @@
 .details {
-    background: rgb(79, 120, 107);
-    border-radius: 25px;
-    color: white;
+  background: rgb(79, 120, 107);
+  border-radius: 25px;
+  color: white;
+  margin-right: 5px;
 }
-.details:hover{
-    background: #fff;
-    color: green;
+.details:hover {
+  background: #fff;
+  color: green;
 }
 
 .delete {
-    color: white;
-    background: rgb(79, 120, 107);
-    margin-left: 2px;
-    margin-top: 10px;
-    border-radius: 25px;
+  color: white;
+  background: rgb(79, 120, 107);
+  border-radius: 25px;
+  margin-right: 5px;
+}
+.update {
+  color: white;
+  background: rgb(79, 120, 107);
+  border-radius: 25px;
+  margin-right: 2px;
 }
 
-.delete:hover{
-    background: rgb(179, 27, 27);
+.delete:hover {
+  background: rgb(179, 27, 27);
 }
 
+.update:hover {
+  background: rgb(8, 99, 203);
+}
