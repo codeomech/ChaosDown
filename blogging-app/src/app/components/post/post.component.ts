@@ -9,31 +9,52 @@ import { PostPayload } from '../user/dashboard/post-blog/post-payload';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
 })
 export class PostComponent implements OnInit {
   post!: PostPayload;
   permaLink!: Number;
+  private readonly wordsPerMinute = 265;
+  readingTime!: number;
 
-  constructor(private router: ActivatedRoute, private postService: AddPostService,private imageProcessingService:ImageProcessingService,private authService:AuthService) {
-  }
+  constructor(
+    private router: ActivatedRoute,
+    private postService: AddPostService,
+    private imageProcessingService: ImageProcessingService,
+    private authService: AuthService
+  ) {}
   isLoggedIn() {
     return this.authService.isAuthenticated();
   }
 
   ngOnInit() {
-    this.router.params.subscribe(params => {
+    this.router.params.subscribe((params) => {
       this.permaLink = params['id'];
     });
 
-    this.postService.getPost(this.permaLink)
-    .pipe(map(p => this.imageProcessingService.CreateImages(p))).
-    subscribe((data:PostPayload) => {
-      this.post = data;
-      console.log(this.post);
-    },(err: any) => {
-      console.log('Failure Response');
-    })
+    this.postService
+      .getPost(this.permaLink)
+      .pipe(map((p) => this.imageProcessingService.CreateImages(p)))
+      .subscribe(
+        (data: PostPayload) => {
+          this.post = data;
+          this.readingTime = this.calculateReadingTime(this.post.content);
+          console.log(this.post);
+        },
+        (err: any) => {
+          console.log('Failure Response');
+        }
+      );
   }
 
+  calculateReadingTime(passage: string): number {
+    const wordCount = this.countWords(passage);
+    const textReadingTimeMinutes = wordCount / this.wordsPerMinute;
+    return Math.ceil(textReadingTimeMinutes);
+  }
+
+  private countWords(text: string): number {
+    const words = text.trim().split(/\s+/);
+    return words.length;
+  }
 }

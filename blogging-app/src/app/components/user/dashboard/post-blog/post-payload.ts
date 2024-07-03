@@ -1,9 +1,9 @@
-import { FileHandle } from "./file-handle.model";
+import { FileHandle } from './file-handle.model';
 
-export class PostPayload{
-    id!: String;
-    content!: String;
-    title!: String;
-    username!: String;
-    postImages!: FileHandle[];   
-  }
+export class PostPayload {
+  id!: string;
+  content!: string;
+  title!: string;
+  username!: string;
+  postImages!: FileHandle[];
+}
