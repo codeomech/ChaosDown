@@ -8,7 +8,7 @@
     </div>
     <input class="search" type="text" [(ngModel)]="term" placeholder="   Search here...">
     <!-- <span class="icon"><mat-icon>search</mat-icon></span> -->
-    <div class="content container">
+    <div class="container">
         <div class="ng-card">
             <div class="row" *ngFor="let post of postDetail | filter:term">
                 <div class="blogpost">
@@ -24,7 +24,8 @@
                         </mat-card-header>
                         <mat-card-content class="desc">
                             <div class="mt-3">
-                                <img mat-card-image [src]="post?.postImages[0]?.url" height="200px" width="270px" alt="">
+                                <img mat-card-image [src]="post?.postImages[0]?.url" height="200px" width="270px"
+                                    alt="">
                             </div>
                             <p [innerHTML]="post.content"></p>
                         </mat-card-content>
@@ -43,4 +44,4 @@
     </div>
 </div>
 <div class="m1"> </div>
-    <app-footer></app-footer>
+<app-footer></app-footer>

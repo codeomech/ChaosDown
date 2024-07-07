@@ -48,7 +48,7 @@ export class PostBlogComponent implements OnInit {
       this.postPayload.content = bodyControl.value;
     }
     if (titleControl) {
-      this.postPayload.content = titleControl.value;
+      this.postPayload.title = titleControl.value;
     }
     const PostFormData = this.prepareFormData(this.postPayload);
 

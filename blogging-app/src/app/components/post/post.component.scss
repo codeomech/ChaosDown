@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+$btn-dimension: 80px;
+$primary-color: rgba(189, 195, 199, 1);
+$secondary-color: rgba(39, 174, 96, 1);
+@mixin debug {
+  outline: 1px solid red;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Montserrat;
+}
+
+/*========================
+    BASIC styles
+  =======================*/
+* {
+  box-sizing: border-box;
+}
+
+/*========================
+    BUTTON styles
+  =======================*/
+.clap {
+  position: relative;
+  outline: 1px solid transparent;
+  border-radius: 50%;
+  border: 1px solid $primary-color;
+  width: $btn-dimension;
+  height: $btn-dimension;
+  background: none;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50%;
+    //border: 1px solid $primary-color;
+    width: $btn-dimension - 1px;
+    height: $btn-dimension - 1px;
+  }
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $secondary-color;
+    transition: border-color 0.3s ease-in;
+    &:after {
+      animation: shockwave 1s ease-in infinite;
+    }
+  }
+  svg {
+    width: 40px;
+    fill: none;
+    stroke: $secondary-color;
+    stroke-width: 2px;
+    &.checked {
+      fill: $secondary-color;
+      stroke: #fff;
+      stroke-width: 1px;
+    }
+  }
+  .clap--count {
+    position: absolute;
+    top: -$btn-dimension/1.6;
+    left: $btn-dimension/4;
+    font-size: 0.8rem;
+    color: white;
+    background: $secondary-color;
+    border-radius: 50%;
+    height: $btn-dimension/2;
+    width: $btn-dimension/2;
+    line-height: $btn-dimension/2;
+  }
+  .clap--count-total {
+    position: absolute;
+    font-size: 0.8rem;
+    width: $btn-dimension;
+    text-align: center;
+    left: 0;
+    top: -$btn-dimension/3.5;
+    color: $primary-color;
+  }
+}
+
+/*====================
+        Message
+======================*/
+#message {
+  position: absolute;
+  bottom: 20px;
+  color: $secondary-color;
+  line-height: 1.52rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  a {
+    color: $primary-color;
+  }
+}
+
+@keyframes shockwave {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 2px $secondary-color;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+    box-shadow: 0 0 50px darken($secondary-color, 20%),
+      inset 0 0 10px $secondary-color;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.col-md-1,
+.col-md-8 {
+  padding: 10px;
+}
+
+h1.blog-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.ImageBanner img {
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-weight: bold;
+  color: #333;
+}
+
+.time {
+  font-size: 0.9em;
+  color: #999;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+  margin: 20px 0;
+}
+
+p {
+  line-height: 1.6;
+  color: #444;
+}
+
+.share {
+  background: rgb(79, 120, 107);
+  align-items: center;
+  margin-right: 30px;
+}
+
+a.txt {
+  text-decoration: none;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+}
+
+a.txt mat-icon {
+  margin-right: 5px;
+}
+
+.share-buttons {
+  display: inline-block;
+  margin: 5px;
+}
+
+.share-Container {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.fb {
+  margin-left: 350px;
+  background: #4267b2;
+}
+.twtr {
+  background: #1da1f2;
+}
+.whtsp {
+  background: #25d366;
+}
+
+.copy {
+  background: orange;
+}
+.clapIcon {
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 420px) {
+  .fb {
+    margin-left: 25px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .fb,
+  .twtr,
+  .whtsp,
+  .copy {
+    margin-right: 15px;
+  }
+}
